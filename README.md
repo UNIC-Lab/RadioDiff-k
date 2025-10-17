@@ -1,5 +1,7 @@
-# RadioDiff-k2 📡
+# RadioDiff-k² 📡
+
 ---
+
 ### Welcome to the RadioDiff family
 
 Base BackBone, Paper Link: [RadioDiff](https://ieeexplore.ieee.org/document/10764739), Code Link: [GitHub](https://github.com/UNIC-Lab/RadioDiff)
@@ -16,40 +18,43 @@ Sparse Measurement for RM ISAC, Paper Link: [RadioDiff-Inverse](https://arxiv.or
 
 Sparse Measurement for NLoS Localization, Paper Link: [RadioDiff-Loc](https://www.arxiv.org/abs/2509.01875)
 
-For more RM information, please visit the repo of [Awesome-Radio-Map-Categorized](https://github.com/UNIC-Lab/Awesome-Radio-Map-Categorized)
+For more RM information, please visit the repo of [Awesome-Radio-Map-Categorized](https://github.com/UNIC-Lab/Awesome-Radio-Map-Categorized). 
 
 ---
 
-
-> 基于扩散模型的智能无线电地图重建系统
+> An intelligent radio-map reconstruction system based on diffusion models. 📶✨ 
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![PyTorch](https://img.shields.io/badge/PyTorch-1.12+-red.svg)](https://pytorch.org)
 [![License](https://img.shields.io/badge/License-Apache_2.0-green.svg)](LICENSE)
 
-RadioDiff-k2 是一个先进的无线电地图重建项目，使用条件扩散模型从稀疏测量数据中生成高质量的无线电覆盖地图。该项目特别适用于5G/6G网络规划、信号传播预测和网络优化。
+RadioDiff-k² is an advanced radio-map reconstruction project that leverages conditional diffusion models to generate high-quality radio-coverage maps from sparse measurements. The project serves 5G and 6G network planning, propagation prediction, and network optimization. 🚀📡 
 
-## ✨ 主要特性
+## ✨ Key Features
 
-### 🎯 多种仿真方法
-- **DPM** - 确定性传播模型，快速准确
-- **IRT4** - 迭代射线追踪，高精度预测  
-- **DPMCARK** - 结合车辆信息的增强模型
+### 🎯 Multiple Simulation Methods
 
-### 🏗️ 先进架构
-- **条件扩散模型** - 基于Swin Transformer
-- **VAE编码器** - 高效特征压缩
-- **多尺度处理** - 支持不同分辨率
+* **DPM** — deterministic propagation modeling with high speed and accuracy
+* **IRT4** — iterative ray tracing with high-precision prediction
+* **DPMCARK** — vehicle-aware enhancement for urban mobility scenes 🚗📡 
 
-### 📊 丰富特征
-- **建筑物布局** - 城市环境建模
-- **发射器位置** - 信号源信息
-- **车辆数据** - 动态障碍物
-- **K2特征** - 物理传播特性
+### 🏗️ Advanced Architecture
 
-## 🚀 快速开始
+* **Conditional diffusion model** built on Swin Transformer
+* **VAE encoder** for compact and efficient representation
+* **Multi-scale processing** for flexible resolution support 🧠🧩 
 
-### 环境要求
+### 📊 Rich Conditioning Features
+
+* **Building layouts** for realistic urban environments
+* **Transmitter positions** to capture source attributes
+* **Vehicle data** for dynamic occlusions
+* **k² features** to encode physical propagation traits 🏙️📍🚘📐 
+
+## 🚀 Quick Start
+
+### Environment Requirements
+
 ```bash
 Python >= 3.8
 CUDA >= 11.0
@@ -58,109 +63,122 @@ PyTorch >= 1.12
 
 
 
-## 📁 项目结构
+## 📁 Project Structure
 
 ```
 RadioDiff-k2/
-├── 📋 configs/                    # 配置文件
-│   ├── BSDS_sample_*.yaml         # 推理配置
-│   └── BSDS_train_*.yaml          # 训练配置
-├── 🧠 denoising_diffusion_pytorch/ # 扩散模型核心
-├── 🔧 lib/                        # 工具库
-│   ├── loaders.py                 # 数据加载器
-│   └── modules.py                 # 网络模块
-├── 💾 model/                      # 预训练模型
-├── 📊 inference/                  # 推理结果
-│   ├── DPMCARK/                  # DPMCARK方法结果
-│   ├── DPMK/                     # DPMK方法结果
-│   └── IRT4K/                    # IRT4K方法结果
-├── 📈 metrics/                    # 评估指标
-├── ⚡ TFMQ/                      # 量化优化
-├── 🚀 train_cond_ldm.py          # 训练脚本
-├── 🔮 sample_cond_ldm.py         # 推理脚本
-├── 🏗️ train_vae.py              # VAE训练
-├── 🧮 caculate_k.py              # K2特征计算
-├── 🎯 demo.py                    # 使用示例
-├── 📦 requirements.txt           # 依赖列表
-└── 📖 README.md                  # 项目文档
+├── 📋 configs/                    # Configuration files
+│   ├── BSDS_sample_*.yaml         # Inference configs
+│   └── BSDS_train_*.yaml          # Training configs
+├── 🧠 denoising_diffusion_pytorch/ # Diffusion core
+├── 🔧 lib/                        # Utilities
+│   ├── loaders.py                 # Data loaders
+│   └── modules.py                 # Network modules
+├── 💾 model/                      # Pretrained models
+├── 📊 inference/                  # Inference results
+│   ├── DPMCARK/                   # DPMCARK outputs
+│   ├── DPMK/                      # DPMK outputs
+│   └── IRT4K/                     # IRT4K outputs
+├── 📈 metrics/                    # Evaluation metrics
+├── ⚡ TFMQ/                        # Quantization and efficiency
+├── 🚀 train_cond_ldm.py           # Training script
+├── 🔮 sample_cond_ldm.py          # Inference script
+├── 🏗️ train_vae.py               # VAE training
+├── 🧮 caculate_k.py               # k² feature computation
+├── 🎯 demo.py                     # Usage examples
+├── 📦 requirements.txt            # Dependencies
+└── 📖 README.md                   # Project docs
 ```
 
-<!-- ## 📦 安装指南
 
-### 方法一：pip安装（推荐）
+
+<!--
+## 📦 Installation Guide
+
+### Method 1: pip
 ```bash
-# 安装核心依赖
+# Core dependencies
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 pip install accelerate torchmetrics scikit-image opencv-python
 pip install pyyaml tqdm matplotlib pandas pillow
 
-# 安装可选依赖
-pip install tensorboard wandb  # 用于训练监控
-``` -->
+# Optional tools for monitoring
+pip install tensorboard wandb
+```
+-->
 
-### 方法二：conda安装
-<!-- ```bash
-# 创建环境
+### Method 2: conda
+
+<!--
+```bash
+# Create environment
 conda create -n radiodiff python=3.9
 conda activate radiodiff
 
-# 安装PyTorch
+# Install PyTorch
 conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
 
-# 安装其他依赖
+# Other dependencies
 pip install accelerate torchmetrics scikit-image opencv-python pyyaml tqdm matplotlib pandas pillow
-``` -->
+```
+-->
 
-## 🎯 使用指南
 
-### 1️⃣ 数据准备
 
-#### 数据集结构
+## 🎯 Usage Guide
+
+### 1️⃣ Data Preparation
+
+#### Dataset Layout
+
 ```
 RadioMapSeer/
 ├── 📁 png/
-│   ├── buildings_complete/        # 建筑物图像 (256x256)
-│   ├── antennas/                  # 发射器位置 (256x256)
-│   └── cars/                      # 车辆信息 (可选)
+│   ├── buildings_complete/        # Building images 256x256
+│   ├── antennas/                  # Transmitter positions 256x256
+│   └── cars/                      # Vehicle information optional
 ├── 📁 gain/
-│   ├── DPM/                       # DPM仿真结果
-│   ├── IRT4/                      # IRT4仿真结果
-│   └── IRT4_k2_neg_norm/          # K2特征图
-└── 📁 metadata/                   # 元数据文件
+│   ├── DPM/                       # DPM simulation results
+│   ├── IRT4/                      # IRT4 simulation results
+│   └── IRT4_k2_neg_norm/          # k² feature maps
+└── 📁 metadata/                   # Meta files
 ```
 
-#### 生成K2特征
+
+
+#### Generate k² Features
+
 ```bash
-# 运行K2特征计算脚本
+# Run the k² feature computation script
 python caculate_k.py
 ```
 
-### 2️⃣ 模型训练
 
 
+### 2️⃣ Model Training
 
-#### 步骤1：训练条件扩散模型
+#### Step 1 — Train the conditional diffusion model
+
 ```bash
-# 训练主模型
+# Train the main model
 python train_cond_ldm.py --cfg configs/BSDS_train_DPMK.yaml
-
 python train_cond_ldm.py --cfg configs/BSDS_train_DPMCARK.yaml
-
 python train_cond_ldm.py --cfg configs/BSDS_train_IRT4K.yaml
-
 ```
 
-### 3️⃣ 模型推理
 
-#### 基础推理
+
+### 3️⃣ Inference
+
+#### Basic Inference
+
 ```bash
-# 使用DPMCARK方法推理
+# DPMCARK inference
 python sample_cond_ldm.py --cfg configs/BSDS_sample_DPMCARK.yaml
 
-# 使用DPMK方法推理
+# DPMK inference
 python sample_cond_ldm.py --cfg configs/BSDS_sample_DPMK.yaml
 
-# 使用IRT4K方法推理
+# IRT4K inference
 python sample_cond_ldm.py --cfg configs/BSDS_sample_IRT4K.yaml
 ```
-
