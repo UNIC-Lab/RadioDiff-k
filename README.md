@@ -80,7 +80,6 @@ RadioDiff-k2/
 │   ├── DPMK/                      # DPMK outputs
 │   └── IRT4K/                     # IRT4K outputs
 ├── 📈 metrics/                    # Evaluation metrics
-├── ⚡ TFMQ/                        # Quantization and efficiency
 ├── 🚀 train_cond_ldm.py           # Training script
 ├── 🔮 sample_cond_ldm.py          # Inference script
 ├── 🏗️ train_vae.py               # VAE training
