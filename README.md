@@ -21,6 +21,8 @@ For more RM information, please visit the repo of [Awesome-Radio-Map-Categorized
 
 ---
 
+### 🎉🎉🎉 The paper has been accepted by IEEE JSAC!
+
 > An intelligent radio-map reconstruction system based on diffusion models. 📶✨ 
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
